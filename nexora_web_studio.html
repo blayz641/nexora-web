@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nexora Web Studio — modern websites for ambitious businesses.">
+<title>Nexora Web Studio</title>
+<style>
+:root{--bg:#080d18;--panel:#111a2b;--muted:#a9b5ca;--text:#f5f7fb;--blue:#70a7ff;--line:rgba(255,255,255,.11)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,#172b50 0,transparent 32%),var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1100px,92%);margin:auto}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.logo{font-size:1.1rem;font-weight:850;letter-spacing:.12em}.logo span{color:var(--blue)}
+nav .links{display:flex;gap:26px;color:var(--muted);font-size:.92rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:10px;background:var(--blue);color:#07101e;font-weight:750;border:0}
+.btn.secondary{background:transparent;color:var(--text);border:1px solid var(--line)}
+.hero{padding:105px 0 82px;max-width:850px}.eyebrow{color:var(--blue);font-size:.78rem;font-weight:800;letter-spacing:.19em;text-transform:uppercase}
+h1{font-size:clamp(2.8rem,7vw,5.4rem);line-height:1.02;letter-spacing:-.055em;margin:18px 0}
+h1 span{color:var(--blue)}.lead{color:var(--muted);font-size:1.12rem;max-width:630px;margin:22px 0 30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.trust{display:flex;gap:24px;flex-wrap:wrap;color:var(--muted);font-size:.88rem;margin-top:42px}
+section{padding:65px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:25px}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.04em;margin:8px 0}.sub{color:var(--muted);max-width:540px;margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:17px;padding:23px}
+.card .num{color:var(--blue);font-weight:800;font-size:.8rem;letter-spacing:.12em}.card h3{margin:12px 0 7px}.card p{color:var(--muted);margin:0;font-size:.95rem}
+.project{overflow:hidden;padding:0}.mock{height:180px;padding:18px;background:linear-gradient(135deg,#213c68,#101a2b);display:flex;align-items:center;justify-content:center}
+.mock .browser{width:88%;height:125px;border-radius:9px;background:#f5f6fa;color:#172033;padding:12px;box-shadow:0 12px 30px #0005}
+.browser .bar{height:7px;width:42%;background:#cbd5e1;border-radius:9px;margin-bottom:12px}.browser .big{font-size:1.05rem;font-weight:850;line-height:1.1}.browser .small{font-size:.62rem;color:#64748b;margin-top:7px}
+.mock{height:215px}.mock .browser{height:170px;padding:10px 12px;overflow:hidden}
+.browser .dots{display:flex;gap:4px;margin-bottom:8px}.browser .dots i{width:6px;height:6px;border-radius:50%;background:#cbd5e1}
+.browser .nav{display:flex;justify-content:space-between;align-items:center;font-size:.55rem;font-weight:800;letter-spacing:.1em;margin-bottom:10px}.browser .nav span{color:#64748b;font-weight:600;letter-spacing:0}
+.browser .cta{display:inline-block;margin-top:9px;font-size:.55rem;font-weight:800;color:#fff;background:var(--a,#2563eb);padding:4px 9px;border-radius:5px}
+.browser .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:10px}.browser .tiles i{height:26px;border-radius:5px;background:var(--a,#2563eb);opacity:.18}
+.facts{list-style:none;margin:14px 0 0;padding:14px 0 0;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted)}.facts li{margin:4px 0}.facts b{color:var(--text);font-weight:650}
+.project-info{padding:19px}
+form{display:grid;gap:12px;margin-top:22px;max-width:620px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{font-size:.78rem;color:var(--muted);display:grid;gap:6px}
+input,select,textarea{font:inherit;color:var(--text);background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:10px;padding:11px 13px;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);outline-offset:1px}select option{color:#111}textarea{min-height:120px;resize:vertical}
+.mailline{margin-top:18px;font-size:.9rem;color:var(--muted)}.mailline a{color:var(--blue);font-weight:700}
+@media(max-width:760px){.row2{grid-template-columns:1fr}}.tag{display:inline-block;font-size:.72rem;color:var(--blue);border:1px solid #34527e;border-radius:20px;padding:3px 9px;margin-top:8px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{border-top:1px solid var(--line);padding-top:15px}.step b{color:var(--blue);font-size:.8rem}
+.price{font-size:1.8rem;font-weight:850;margin:10px 0}.note{font-size:.8rem;color:var(--muted)}
+.contact{background:linear-gradient(130deg,#152744,#101827);border:1px solid var(--line);border-radius:22px;padding:38px}
+footer{padding:35px 0;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);margin-top:65px}
+@media(max-width:760px){nav .links{display:none}.hero{padding:75px 0 55px}.cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.section-head{display:block}.contact{padding:25px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a class="logo" href="#">NEXORA<span>.</span></a><div class="links"><a href="#services">Services</a><a href="#work">Projects</a><a href="#process">Process</a><a href="#contact">Contact</a></div><a class="btn" href="#contact">Start a project</a></nav>
+<main>
+<div class="hero">
+<div class="eyebrow">Independent web design studio</div>
+<h1>Websites that make your business <span>stand out.</span></h1>
+<p class="lead">Modern, responsive websites for small businesses and ambitious ideas. Clear design, smooth user experience, and a process built around your goals.</p>
+<div class="actions"><a class="btn" href="#contact">Discuss your website →</a><a class="btn secondary" href="#work">Explore demo projects</a></div>
+<div class="trust"><span>✦ Mobile-first design</span><span>✦ Clear communication</span><span>✦ Customised to your brand</span></div>
+</div>
+<section id="services">
+<div class="section-head"><div><div class="eyebrow">What I can create</div><h2>Services</h2></div><p class="sub">Choose a starting point. Every project is scoped and priced individually before work begins.</p></div>
+<div class="cards">
+<div class="card"><div class="num">01 / LANDING PAGE</div><h3>One-page website</h3><p>A focused page that explains your offer and helps visitors contact you.</p></div>
+<div class="card"><div class="num">02 / BUSINESS WEBSITE</div><h3>Business website</h3><p>A polished online home for your company, services, team, and contact details.</p></div>
+<div class="card"><div class="num">03 / REDESIGN</div><h3>Website refresh</h3><p>A cleaner layout and improved mobile experience for an existing website.</p></div>
+</div>
+</section>
+<section id="work">
+<div class="section-head"><div><div class="eyebrow">Concept projects</div><h2>Selected demo work</h2></div><p class="sub">Full website concepts made for the portfolio. They are examples of my design work, not real client projects.</p></div>
+<div class="cards">
+<div class="card project"><div class="mock" style="background:linear-gradient(135deg,#213c68,#101a2b)"><div class="browser" style="--a:#c2410c"><div class="dots"><i></i><i></i><i></i></div><div class="nav">MAISON<span>Menu · Book · Contact</span></div><div class="big">GOOD FOOD.<br>GOOD MOOD.</div><div class="small">Seasonal menu, opening hours and table booking</div><span class="cta">Book a table</span><div class="tiles"><i></i><i></i><i></i></div></div></div><div class="project-info"><h3>Maison Café</h3><p>Restaurant website concept with a menu, gallery and booking form.</p><span class="tag">Hospitality · Concept</span><ul class="facts"><li><b>Pages:</b> Home, Menu, Gallery, Booking, Contact</li><li><b>Features:</b> online menu, booking request form, Google Maps block, opening hours</li></ul></div></div>
+<div class="card project"><div class="mock" style="background:linear-gradient(135deg,#38505c,#111a2b)"><div class="browser" style="--a:#0f766e"><div class="dots"><i></i><i></i><i></i></div><div class="nav">NORTHLINE<span>Services · Prices · Quote</span></div><div class="big">DETAILING<br>WITHOUT LIMITS.</div><div class="small">Ceramic coating, polishing and interior care</div><span class="cta">Get a quote</span><div class="tiles"><i></i><i></i><i></i></div></div></div><div class="project-info"><h3>Northline Auto</h3><p>Car detailing concept built around trust, clear packages and fast quotes.</p><span class="tag">Automotive · Concept</span><ul class="facts"><li><b>Pages:</b> Home, Services, Packages, Before/After, Contact</li><li><b>Features:</b> price packages, before/after gallery, quote request, FAQ</li></ul></div></div>
+<div class="card project"><div class="mock" style="background:linear-gradient(135deg,#4b315e,#111a2b)"><div class="browser" style="--a:#7c3aed"><div class="dots"><i></i><i></i><i></i></div><div class="nav">STUDIO 8<span>Team · Services · Book</span></div><div class="big">YOUR NEXT<br>FAVOURITE CUT.</div><div class="small">Classic cuts, beard care and walk-ins welcome</div><span class="cta">Book now</span><div class="tiles"><i></i><i></i><i></i></div></div></div><div class="project-info"><h3>Studio Eight</h3><p>Barbershop concept with service highlights and a clear appointment button.</p><span class="tag">Lifestyle · Concept</span><ul class="facts"><li><b>Pages:</b> Home, Services, Team, Prices, Contact</li><li><b>Features:</b> service price list, barber profiles, booking button, Instagram feed</li></ul></div></div>
+</div>
+</section>
+<section id="process">
+<div class="eyebrow">Simple from start to finish</div><h2>How it works</h2>
+<div class="steps">
+<div class="step"><b>STEP 01</b><h3>Tell me your idea</h3><p class="note">Share your business, goals, and examples you like.</p></div>
+<div class="step"><b>STEP 02</b><h3>Plan the design</h3><p class="note">Agree on pages, features, timeline, and a written quote.</p></div>
+<div class="step"><b>STEP 03</b><h3>Build & review</h3><p class="note">Review a preview and request the agreed changes.</p></div>
+<div class="step"><b>STEP 04</b><h3>Launch</h3><p class="note">Final handover after approval and agreed payment.</p></div>
+</div>
+</section>
+<section>
+<div class="contact"><div class="eyebrow">Transparent project quotes</div><h2>Every business is different.</h2><p class="sub">Send a short project brief to discuss the scope and receive a quote. Hosting, domain costs, maintenance, and extra features are agreed separately.</p><p class="note">Payment methods, including any cryptocurrency option, must be agreed in advance and handled in compliance with applicable rules.</p></div>
+</section>
+<section id="contact">
+<div class="contact"><div class="eyebrow">Have a project in mind?</div><h2>Let's build something useful.</h2><p class="sub">Tell me a little about your business and what you need. I'll reply by email with questions and a quote.</p>
+<form id="f">
+<div class="row2"><label>Your name<input name="name" required autocomplete="name" placeholder="Anna"></label><label>Your email<input name="email" type="email" required autocomplete="email" placeholder="you@example.com"></label></div>
+<label>What do you need?<select name="type"><option>One-page website</option><option>Business website</option><option>Website refresh</option><option>Not sure yet</option></select></label>
+<label>About your project<textarea name="msg" required placeholder="What does your business do? Any websites you like? When do you need it?"></textarea></label>
+<button class="btn" type="submit">Send by email →</button>
+</form>
+<p class="mailline">Or write directly: <a href="mailto:nexora.webstudio2027@gmail.com?subject=Website%20project%20enquiry">nexora.webstudio2027@gmail.com</a></p></div>
+</section>
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+e.preventDefault();var d=new FormData(this);
+var body='Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\nProject type: '+d.get('type')+'\n\n'+d.get('msg');
+location.href='mailto:nexora.webstudio2027@gmail.com?subject='+encodeURIComponent('Website project enquiry from '+d.get('name'))+'&body='+encodeURIComponent(body);
+});
+</script>
+</main>
+<footer>© 2026 Nexora Web Studio · Concept projects are portfolio examples, not real client work. · <a href="mailto:nexora.webstudio2027@gmail.com">nexora.webstudio2027@gmail.com</a></footer>
+</div>
+</body>
+</html>
